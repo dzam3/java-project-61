@@ -8,9 +8,9 @@ public class Even {
         Random random = new Random();
         int number = random.nextInt(100);
 
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n" +
-                "Question: " + number +
-                "\nYour answer: ");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n"
+                + "Question: " + number
+                + "\nYour answer: ");
         String answer = scanner.next();
         String rightAnswer = number % 2 == 0 ? "yes" : "no";
 

@@ -1,7 +1,7 @@
 package hexlet.code;
 
 import static hexlet.code.Even.even;
-import static hexlet.code.Cli.*;
+import static hexlet.code.Cli.gamePicker;
 
 public class App {
     public static void main(String[] args) {
