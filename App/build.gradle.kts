@@ -24,3 +24,7 @@ tasks.test {
 tasks.compileJava {
     options.release.set(21)
 }
+
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
+}
