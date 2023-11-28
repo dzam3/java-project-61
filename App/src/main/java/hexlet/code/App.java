@@ -9,15 +9,17 @@ public class App {
 
         if (answer == 2) {
             String name = Cli.askName();
-            int counter = 0;
+            even(name);
 
-            while (counter <= 3) {
-                counter += even();
-                if (counter == 3) {
-                    System.out.println("Congratulations, " + name + "!");
-                    break;
-                }
-            }
+//            int counter = 0;
+
+//             while (counter <= 3) {
+//                 counter += even();
+//                 if (counter == 3) {
+//                     System.out.println("Congratulations, " + name + "!");
+//                     break;
+//                 }
+//             }
         } else if (answer == 1) {
             Cli.askName();
         }

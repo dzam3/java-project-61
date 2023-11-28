@@ -1,25 +1,30 @@
 package hexlet.code;
 import java.util.Scanner;
 import java.util.Random;
+import static hexlet.code.Engine.engine;
 
 public class Even {
-    public static int even() {
+    public static void even(String name) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int number = random.nextInt(100);
+        int i = 0;
+        String[] response = new String[2];
 
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n"
-                + "Question: " + number
-                + "\nYour answer: ");
-        String answer = scanner.next();
-        String rightAnswer = number % 2 == 0 ? "yes" : "no";
+        while (i < 3) {
+            int number = random.nextInt(100);
+            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n"
+                    + "Question: " + number
+                    + "\nYour answer: ");
+            String answer = scanner.next();
+            String rightAnswer = number % 2 == 0 ? "yes" : "no";
 
-        if (answer.equals(rightAnswer)) {
-            System.out.println("Correct!");
-            return 1;
-        } else {
-            System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + rightAnswer + "'");
-            return 4;
+            response[0] = rightAnswer;
+            response[1] = answer;
+            i += engine(response);
+            if (i == 3) {
+                System.out.println("Congratulations, " + name + "!");
+                break;
+            }
         }
     }
 }
