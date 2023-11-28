@@ -23,7 +23,7 @@ tasks.test {
 }
 
 tasks.compileJava {
-    options.release.set(21)
+    options.release.set(20)
 }
 
 tasks.named<JavaExec>("run") {

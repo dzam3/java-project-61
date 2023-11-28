@@ -19,7 +19,7 @@ public class Even {
             return 1;
         } else {
             System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + rightAnswer + "'");
-            return 0;
+            return 4;
         }
     }
 }

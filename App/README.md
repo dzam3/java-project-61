@@ -5,3 +5,7 @@
 ```bash
 make run
 ```
+
+## Run example
+
+https://asciinema.org/a/kyqV8chEgFOPqBthDglPR4VdE

@@ -11,14 +11,13 @@ public class App {
             String name = Cli.askName();
             int counter = 0;
 
-            while (counter < 3) {
-                if (even() == 1) {
-                    counter++;
-                } else {
-                    counter = 0;
+            while (counter <= 3) {
+                counter += even();
+                if (counter == 3) {
+                    System.out.println("Congratulations, " + name + "!");
+                    break;
                 }
             }
-            System.out.println("Congratulations, " + name + "!");
         } else if (answer == 1) {
             Cli.askName();
         }
