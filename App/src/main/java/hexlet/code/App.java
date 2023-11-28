@@ -1,28 +1,20 @@
 package hexlet.code;
 
-import static hexlet.code.Even.even;
-import static hexlet.code.Cli.gamePicker;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
 
 public class App {
     public static void main(String[] args) {
-        int answer = gamePicker();
+        int answer = Cli.gamePicker();
 
-        if (answer == 2) {
-            String name = Cli.askName();
-            even(name);
-
-//            int counter = 0;
-
-//             while (counter <= 3) {
-//                 counter += even();
-//                 if (counter == 3) {
-//                     System.out.println("Congratulations, " + name + "!");
-//                     break;
-//                 }
-//             }
-        } else if (answer == 1) {
+        if (answer == 1) {
             Cli.askName();
+        } else if (answer == 2) {
+            String name = Cli.askName();
+            Even.even(name);
+        } else if (answer == 3) {
+            String name = Cli.askName();
+            Calc.calc(name);
         }
-
     }
 }

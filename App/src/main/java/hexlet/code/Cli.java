@@ -6,7 +6,7 @@ public class Cli {
     public static String askName() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("May I have your name?");
+        System.out.println("Welcome to the Brain Games!\nMay I have your name?");
         String name = scanner.next();
 
         System.out.println("Hello " + name + "!");
@@ -16,11 +16,13 @@ public class Cli {
     public static int gamePicker() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please enter the game number and press Enter.\n"
-                + "1 - Greet\n"
-                + "2 - Even\n"
-                + "0 - Exit\n"
-                + "Your choice:");
+        System.out.println("""
+                Please enter the game number and press Enter.
+                1 - Greet
+                2 - Even
+                3 - Calc
+                0 - Exit
+                Your choice:""");
         return scanner.nextInt();
     }
 }
