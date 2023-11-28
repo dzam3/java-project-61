@@ -6,6 +6,8 @@
 make run
 ```
 
-## Run example
+## Run examples
 
-https://asciinema.org/a/kyqV8chEgFOPqBthDglPR4VdE
+[Even](https://asciinema.org/a/kyqV8chEgFOPqBthDglPR4VdE)
+
+[Calc](https://asciinema.org/a/xgblJEAi4hmF6EqSvqZCVPnYx)
