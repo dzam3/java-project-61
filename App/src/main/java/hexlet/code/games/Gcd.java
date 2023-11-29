@@ -27,6 +27,7 @@ public class Gcd {
             int[] factors1 = {1};
             int[] factors2 = {1};
 
+//TODO extract logic below into separate classes in tools package
             while (number1 % 2 == 0) {
                 number1 /= 2;
                 factors1 = ArrayUtils.add(factors1, 2);
