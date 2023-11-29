@@ -13,7 +13,7 @@ public class Calc {
             int number2 = random.nextInt(100);
             int operator = random.nextInt(3);
             int rightAnswer = 0;
-            System.out.println("What is the result of the expression?.");
+            System.out.println("What is the result of the expression?");
 
             switch (operator) {
                 case 0:

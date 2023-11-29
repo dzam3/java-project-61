@@ -11,3 +11,5 @@ make run
 [Even](https://asciinema.org/a/kyqV8chEgFOPqBthDglPR4VdE)
 
 [Calc](https://asciinema.org/a/xgblJEAi4hmF6EqSvqZCVPnYx)
+
+[GCD](https://asciinema.org/a/DbhXJTzEU87ZT6nGouZwdzEq5)

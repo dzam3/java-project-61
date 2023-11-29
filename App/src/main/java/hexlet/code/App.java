@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
 
 public class App {
     public static void main(String[] args) {
@@ -15,6 +16,9 @@ public class App {
         } else if (answer == 3) {
             String name = Cli.askName();
             Calc.calc(name);
+        } else if (answer == 4) {
+            String name = Cli.askName();
+            Gcd.gcd(name);
         }
     }
 }
