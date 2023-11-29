@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.Gcd;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 public class App {
     public static void main(String[] args) {
@@ -23,6 +20,9 @@ public class App {
         } else if (answer == 5) {
             String name = Cli.askName();
             Progression.progression(name);
+        } else if (answer == 6) {
+            String name = Cli.askName();
+            Prime.prime(name);
         }
     }
 }
