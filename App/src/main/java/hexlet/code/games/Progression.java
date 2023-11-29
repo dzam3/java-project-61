@@ -13,12 +13,12 @@ public class Progression {
         int i = 0;
 
         while (i < 3) {
-            int progLength = random.nextInt(5,10);
+            int progLength = random.nextInt(5, 10);
             int position = random.nextInt(1, progLength) - 1;
             int[] prog = new int[progLength];
             int progStart = random.nextInt(50);
             prog[0] = progStart;
-            int progStep = random.nextInt(1,10);
+            int progStep = random.nextInt(1, 10);
 
             for (int counter = 1; counter < progLength; counter++) {
                 prog[counter] = prog[counter - 1] + progStep;
