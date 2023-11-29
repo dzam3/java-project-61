@@ -14,7 +14,7 @@ public class Progression {
 
         while (i < 3) {
             int progLength = random.nextInt(5,10);
-            int position = random.nextInt(progLength) - 1;
+            int position = random.nextInt(1, progLength) - 1;
             int[] prog = new int[progLength];
             int progStart = random.nextInt(50);
             prog[0] = progStart;
