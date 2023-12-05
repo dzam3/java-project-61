@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
 import static hexlet.code.Engine.engine;
 
 public class Gcd {
-    public static void gcd(String name) {
+    public static void gcd() {
         Random random = new Random();
         int i = 0;
 
@@ -60,7 +60,7 @@ public class Gcd {
 
             rightAnswer = ArrayMax.findMax(commonFactors);
 
-            i += engine(String.valueOf(rightAnswer), name);
+            i += engine(String.valueOf(rightAnswer));
 
             if (i == 3) {
                 System.out.println("Congratulations, " + name + "!");

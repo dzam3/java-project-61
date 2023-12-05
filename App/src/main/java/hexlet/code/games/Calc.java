@@ -4,7 +4,7 @@ import java.util.Random;
 import static hexlet.code.Engine.engine;
 
 public class Calc {
-    public static void calc(String name) {
+    public static void calc() {
         Random random = new Random();
         int i = 0;
 
@@ -19,7 +19,7 @@ public class Calc {
                 case 0:
                     rightAnswer = number1 + number2;
                     System.out.println("Question: " + number1 + " + " + number2);
-                    break;
+                    hexlet.code.
                 case 1:
                     rightAnswer = number1 - number2;
                     System.out.println("Question: " + number1 + " - " + number2);
@@ -30,7 +30,7 @@ public class Calc {
                     break;
             }
             System.out.println("Your answer: ");
-            i += engine(String.valueOf(rightAnswer), name);
+            i += engine(String.valueOf(rightAnswer));
 
             if (i == 3) {
                 System.out.println("Congratulations, " + name + "!");

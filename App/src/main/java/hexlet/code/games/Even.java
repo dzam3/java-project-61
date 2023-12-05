@@ -3,7 +3,7 @@ import java.util.Random;
 import static hexlet.code.Engine.engine;
 
 public class Even {
-    public static void even(String name) {
+    public static void even() {
         Random random = new Random();
         int i = 0;
 
@@ -13,7 +13,7 @@ public class Even {
                     + "Question: " + number
                     + "\nYour answer: ");
             String rightAnswer = number % 2 == 0 ? "yes" : "no";
-            i += engine(rightAnswer, name);
+            i += engine(rightAnswer);
             if (i == 3) {
                 System.out.println("Congratulations, " + name + "!");
                 break;

@@ -8,7 +8,7 @@ import static hexlet.code.Engine.engine;
 import static hexlet.code.tools.ArrayToStringConverter.convertIntArrayToStringArray;
 
 public class Progression {
-    public static void progression(String name) {
+    public static void progression() {
         Random random = new Random();
         int i = 0;
 
@@ -35,7 +35,7 @@ public class Progression {
 
             int rightAnswer = prog[position];
 
-            i += engine(String.valueOf(rightAnswer), name);
+            i += engine(String.valueOf(rightAnswer));
 
             if (i == 3) {
                 System.out.println("Congratulations, " + name + "!");

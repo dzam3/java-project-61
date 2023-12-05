@@ -5,7 +5,7 @@ import java.util.Random;
 import static hexlet.code.Engine.engine;
 
 public class Prime {
-    public static void prime(String name) {
+    public static void prime() {
         Random random = new Random();
         int i = 0;
 
@@ -28,7 +28,7 @@ public class Prime {
                 rightAnswer = "yes";
             }
 
-            i += engine(rightAnswer, name);
+            i += engine(rightAnswer);
 
             if (i == 3) {
                 System.out.println("Congratulations, " + name + "!");

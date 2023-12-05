@@ -1,28 +1,45 @@
 package hexlet.code;
 
 import hexlet.code.games.*;
+import static hexlet.code.Engine.askName;
+
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        int answer = Cli.gamePicker();
+        Scanner scanner = new Scanner(System.in);
 
-        if (answer == 1) {
-            Cli.askName();
-        } else if (answer == 2) {
-            String name = Cli.askName();
-            Even.even(name);
-        } else if (answer == 3) {
-            String name = Cli.askName();
-            Calc.calc(name);
-        } else if (answer == 4) {
-            String name = Cli.askName();
-            Gcd.gcd(name);
-        } else if (answer == 5) {
-            String name = Cli.askName();
-            Progression.progression(name);
-        } else if (answer == 6) {
-            String name = Cli.askName();
-            Prime.prime(name);
+        System.out.println("""
+                Please enter the game number and press Enter.
+                1 - Greet
+                2 - Even
+                3 - Calc
+                4 - GCD
+                5 - Progression
+                6 - Prime
+                0 - Exit
+                Your choice:""");
+        var answer = scanner.nextInt();
+
+        switch (answer) {
+            case 1:
+                askName();
+                break;
+            case 2:
+                Even.even();
+                break;
+            case 3:
+                Calc.calc();
+                break;
+            case 4:
+                Gcd.gcd();
+                break;
+            case 5:
+                Progression.progression();
+                break;
+            case 6:
+                Prime.prime();
+                break;
         }
     }
 }
