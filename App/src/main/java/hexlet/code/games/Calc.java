@@ -28,6 +28,8 @@ public class Calc {
                 case 2:
                     rounds[i][1] = String.valueOf(number1 * number2);
                     break;
+                default:
+                    break;
             }
         }
         engine(rules, rounds);

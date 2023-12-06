@@ -41,6 +41,8 @@ public class App {
             case 6:
                 Prime.prime();
                 break;
+            default:
+                break;
         }
     }
 }
