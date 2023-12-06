@@ -7,14 +7,13 @@ import static hexlet.code.Engine.engine;
 public class Prime {
     public static void prime() {
         Random random = new Random();
-        int i = 0;
+        String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        String[][] rounds = new String[3][2];
 
-        while (i < 3) {
+        for (var i = 0; i < 3; i++) {
             int number = random.nextInt(100);
+            rounds[i][0] = String.valueOf(number);
 
-            System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.\n"
-                    + "Question: " + number
-                    + "\nYour answer: ");
             String rightAnswer = "yes";
 
             for (int counter = 2; counter <= Math.sqrt(number); counter += 1) {
@@ -23,17 +22,8 @@ public class Prime {
                     break;
                 }
             }
-
-            if (number == 1 || number == 2) {
-                rightAnswer = "yes";
-            }
-
-            i += engine(rightAnswer);
-
-            if (i == 3) {
-                System.out.println("Congratulations, " + name + "!");
-                break;
-            }
+            rounds[i][1] = rightAnswer;
         }
+        engine(rules, rounds);
     }
 }

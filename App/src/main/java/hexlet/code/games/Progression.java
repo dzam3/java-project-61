@@ -1,46 +1,34 @@
 package hexlet.code.games;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 import java.util.Random;
 
 import static hexlet.code.Engine.engine;
-import static hexlet.code.tools.ArrayToStringConverter.convertIntArrayToStringArray;
-
 public class Progression {
     public static void progression() {
         Random random = new Random();
-        int i = 0;
+        String rules = "What number is missing in the progression?";
+        String[][] rounds = new String[3][2];
 
-        while (i < 3) {
+        for (var i = 0; i < 3; i++) {
             int progLength = random.nextInt(5, 10);
-            int position = random.nextInt(1, progLength) - 1;
-            int[] prog = new int[progLength];
             int progStart = random.nextInt(50);
-            prog[0] = progStart;
             int progStep = random.nextInt(1, 10);
+            int hiddenNumber = random.nextInt(1, progLength);
+            int[] prog = new int[progLength];
+            String progString = String.valueOf(progStart);
+            prog[0] = progStart;
 
             for (int counter = 1; counter < progLength; counter++) {
                 prog[counter] = prog[counter - 1] + progStep;
+                if (counter == hiddenNumber) {
+                    progString += " ..";
+                } else {
+                    progString += " " + prog[counter];
+                }
             }
-
-            String[] progString = convertIntArrayToStringArray(prog);
-            progString[position] = "..";
-
-            String progForPrint = ArrayUtils.toString(progString).replace(",", " ");
-
-            System.out.println("What number is missing in the progression?\n"
-                    + "Question: " + progForPrint.substring(1, progForPrint.length() - 1)
-                    + "\nYour answer: ");
-
-            int rightAnswer = prog[position];
-
-            i += engine(String.valueOf(rightAnswer));
-
-            if (i == 3) {
-                System.out.println("Congratulations, " + name + "!");
-                break;
-            }
+            rounds[i][0] = progString;
+            rounds[i][1] = String.valueOf(prog[hiddenNumber]);
         }
+        engine(rules, rounds);
     }
 }

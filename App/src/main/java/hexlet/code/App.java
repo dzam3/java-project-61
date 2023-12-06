@@ -1,9 +1,10 @@
 package hexlet.code;
 
 import hexlet.code.games.*;
-import static hexlet.code.Engine.askName;
 
 import java.util.Scanner;
+
+import static hexlet.code.Engine.askName;
 
 public class App {
     public static void main(String[] args) {

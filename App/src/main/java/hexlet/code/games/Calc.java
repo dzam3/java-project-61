@@ -1,42 +1,35 @@
 package hexlet.code.games;
 
 import java.util.Random;
+
 import static hexlet.code.Engine.engine;
 
 public class Calc {
-//    public static void calc() {
-//        Random random = new Random();
-//        int i = 0;
-//
-//
-//        while (i < 3) {
-//            int number1 = random.nextInt(100);
-//            int number2 = random.nextInt(100);
-//            int operator = random.nextInt(3);
-//            int rightAnswer = 0;
-//            System.out.println("What is the result of the expression?");
-//
-//            switch (operator) {
-//                case 0:
-//                    rightAnswer = number1 + number2;
-//                    System.out.println("Question: " + number1 + " + " + number2);
-//                    break;
-//                case 1:
-//                    rightAnswer = number1 - number2;
-//                    System.out.println("Question: " + number1 + " - " + number2);
-//                    break;
-//                case 2:
-//                    rightAnswer = number1 * number2;
-//                    System.out.println("Question: " + number1 + " * " + number2);
-//                    break;
-//            }
-//            System.out.println("Your answer: ");
-//            i += engine(String.valueOf(rightAnswer));
-//
-//            if (i == 3) {
-//                System.out.println("Congratulations, " + name + "!");
-//                break;
-//            }
-//        }
-//    }
+    public static void calc() {
+        Random random = new Random();
+        String rules = "What is the result of the expression?";
+        String[][] rounds = new String[3][2];
+
+        for (var i = 0; i < 3; i++) {
+            int number1 = random.nextInt(100);
+            int number2 = random.nextInt(100);
+            int operNum = random.nextInt(3);
+            String[] operators = {" + ", " - ", " * "};
+
+            rounds[i][0] = number1 + operators[operNum] + number2;
+
+            switch (operNum) {
+                case 0:
+                    rounds[i][1] = String.valueOf(number1 + number2);
+                    break;
+                case 1:
+                    rounds[i][1] = String.valueOf(number1 - number2);
+                    break;
+                case 2:
+                    rounds[i][1] = String.valueOf(number1 * number2);
+                    break;
+            }
+        }
+        engine(rules, rounds);
+    }
 }
