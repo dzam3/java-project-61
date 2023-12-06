@@ -22,11 +22,11 @@ public class Gcd {
 
             int a = numbers[1];
             int b = numbers[0];
-            int r = (a % b);
 
             if (b == 0) {
                 rounds[i][1] = String.valueOf(a);
             } else {
+                int r = (a % b);
                 while (r > 0) {
                     a = b;
                     b = r;
