@@ -3,18 +3,30 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static int engine(String rightAnswer) {
+    public static void engine(String rules, String[][] rounds) {
         var name = askName();
-        Scanner scanner = new Scanner(System.in);
-        String response = scanner.next();
+        System.out.println(rules);
 
-        if (response.equals(rightAnswer)) {
-            System.out.println("Correct!");
-            return 1;
-        } else {
-            System.out.println("'" + response + "'" + " is wrong answer ;(. Correct answer was '" + rightAnswer + "'"
-                    + "\nLet's try again, " + name + "!");
-            return 4;
+        for (var i = 0; i < 3; i++) {
+            var question = rounds[i][0];
+            var rightAnswer = rounds[i][1];
+
+            System.out.print("Question: " + question
+                    + "\nAnswer: ");
+            Scanner scanner = new Scanner(System.in);
+            String response = scanner.next();
+
+            if (response.equals(rightAnswer)) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + response + "'" + " is wrong answer ;(. Correct answer was '" + rightAnswer + "'"
+                        + "\nLet's try again, " + name + "!");
+                break;
+            }
+
+            if (i == 2) {
+                System.out.println("Congratulations, " + name + "!");
+            }
         }
     }
 
