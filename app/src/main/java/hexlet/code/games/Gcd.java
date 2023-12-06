@@ -6,10 +6,12 @@ import static hexlet.code.Engine.engine;
 import static java.util.Arrays.sort;
 
 public class Gcd {
+    private static final int ROUNDS_QTY = 3;
+    private static final int ROUNDS_SLOTS = 2;
     public static void gcd() {
         Random random = new Random();
         String rules = "Find the greatest common divisor of given numbers.";
-        String[][] rounds = new String[3][2];
+        String[][] rounds = new String[ROUNDS_QTY][ROUNDS_SLOTS];
 
         for (var i = 0; i < 3; i++) {
             int number1 = random.nextInt(100);

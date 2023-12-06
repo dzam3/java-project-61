@@ -19,7 +19,8 @@ public class Engine {
             if (response.equals(rightAnswer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + response + "'" + " is wrong answer ;(. Correct answer was '" + rightAnswer + "'"
+                System.out.println("'" + response + "'" + " is wrong answer ;(. Correct answer was '"
+                        + rightAnswer + "'"
                         + "\nLet's try again, " + name + "!");
                 break;
             }

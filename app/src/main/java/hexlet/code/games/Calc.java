@@ -5,10 +5,12 @@ import java.util.Random;
 import static hexlet.code.Engine.engine;
 
 public class Calc {
+    private static final int ROUNDS_QTY = 3;
+    private static final int ROUNDS_SLOTS = 2;
     public static void calc() {
         Random random = new Random();
         String rules = "What is the result of the expression?";
-        String[][] rounds = new String[3][2];
+        String[][] rounds = new String[ROUNDS_QTY][ROUNDS_SLOTS];
 
         for (var i = 0; i < 3; i++) {
             int number1 = random.nextInt(100);
