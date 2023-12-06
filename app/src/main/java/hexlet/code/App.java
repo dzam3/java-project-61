@@ -12,7 +12,12 @@ import java.util.Scanner;
 import static hexlet.code.Engine.askName;
 
 public class App {
-
+    private static final int GREETING = 1;
+    private static final int EVEN = 2;
+    private static final int CALC = 3;
+    private static final int GCD = 4;
+    private static final int PROGRESSION = 5;
+    private static final int PRIME = 6;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -29,22 +34,22 @@ public class App {
         var answer = scanner.nextInt();
 
         switch (answer) {
-            case 1:
+            case GREETING:
                 askName();
                 break;
-            case 2:
+            case EVEN:
                 Even.even();
                 break;
-            case 3:
+            case CALC:
                 Calc.calc();
                 break;
-            case 4:
+            case GCD:
                 Gcd.gcd();
                 break;
-            case 5:
+            case PROGRESSION:
                 Progression.progression();
                 break;
-            case 6:
+            case PRIME:
                 Prime.prime();
                 break;
             default:
