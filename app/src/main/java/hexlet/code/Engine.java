@@ -3,11 +3,12 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+    private static final int ROUNDS_QTY = 3;
     public static void engine(String rules, String[][] rounds) {
         var name = askName();
         System.out.println(rules);
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < ROUNDS_QTY; i++) {
             var question = rounds[i][0];
             var rightAnswer = rounds[i][1];
 
