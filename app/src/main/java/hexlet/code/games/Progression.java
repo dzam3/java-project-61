@@ -8,7 +8,7 @@ public class Progression {
     private static final int ROUNDS_SLOTS = 2;
     private static final int LEN_MIN = 5;
     private static final int LEN_MAX = 5;
-    private static final int START_BOUND = 50
+    private static final int START_BOUND = 50;
 
     public static void progression() {
         Random random = new Random();
