@@ -13,34 +13,32 @@ public class Calc {
         String rules = "What is the result of the expression?";
         String[][] rounds = new String[ROUNDS_QTY][ROUNDS_SLOTS];
 
-        roundsGen(rounds);
+        for (int i = 0; i < ROUNDS_QTY; i++) {
+            rounds[i] = roundsGen();
+        }
         engine(rules, rounds);
     }
 
-    private static void roundsGen(String[][] rounds) {
-        for (var i = 0; i < ROUNDS_QTY; i++) {
-            int number1 = getRandom(NUM_BOUND);
-            int number2 = getRandom(NUM_BOUND);
-            int operNum = getRandom(OPER_SLOTS);
-            String[] operators = {" + ", " - ", " * "};
+    private static String[] roundsGen() {
+        int number1 = getRandom(NUM_BOUND);
+        int number2 = getRandom(NUM_BOUND);
+        int operNum = getRandom(OPER_SLOTS);
+        String[] operators = {" + ", " - ", " * "};
 
-            rounds[i][0] = number1 + operators[operNum] + number2;
-            int rightAnswer = 0;
+        String[] round = new String[ROUNDS_SLOTS];
+        round[0] = number1 + operators[operNum] + number2;
 
-            switch (operNum) {
-                case 0:
-                    rightAnswer = number1 + number2;
-                    break;
-                case 1:
-                    rightAnswer = number1 - number2;
-                    break;
-                case 2:
-                    rightAnswer = number1 * number2;
-                    break;
-                default:
-                    break;
-            }
-            rounds[i][1] = String.valueOf(rightAnswer);
-        }
+        int rightAnswer = getRightAnswer(operNum, number1, number2);
+        round[1] = String.valueOf(rightAnswer);
+        return round;
+    }
+
+    private static int getRightAnswer(int operNum, int number1, int number2) {
+        return switch (operNum) {
+            case 0 -> number1 + number2;
+            case 1 -> number1 - number2;
+            case 2 -> number1 * number2;
+            default -> throw new IllegalArgumentException("Unsupported value: " + operNum);
+        };
     }
 }

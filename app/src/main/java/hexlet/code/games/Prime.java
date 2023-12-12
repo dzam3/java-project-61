@@ -11,24 +11,27 @@ public class Prime {
         String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] rounds = new String[ROUNDS_QTY][ROUNDS_SLOTS];
 
-        roundsGen(rounds);
+        for (int i = 0; i < ROUNDS_QTY; i++) {
+            rounds[i] = roundsGen();
+        }
         engine(rules, rounds);
     }
 
-    private static void roundsGen(String[][] rounds) {
-        for (var i = 0; i < ROUNDS_QTY; i++) {
-            int number = getRandom(NUM_BOUND);
-            rounds[i][0] = String.valueOf(number);
+    private static String[] roundsGen() {
+        int number = getRandom(NUM_BOUND);
+        String[] round = new String[ROUNDS_SLOTS];
+        round[0] = String.valueOf(number);
 
-            String rightAnswer = "yes";
+        String rightAnswer = "yes";
 
-            for (int counter = 2; counter <= Math.sqrt(number); counter += 1) {
-                if (number % counter == 0) {
-                    rightAnswer = "no";
-                    break;
-                }
+        for (int counter = 2; counter <= Math.sqrt(number); counter += 1) {
+            if (number % counter == 0) {
+                rightAnswer = "no";
+                break;
             }
-            rounds[i][1] = rightAnswer;
         }
+        round[1] = rightAnswer;
+
+        return round;
     }
 }
