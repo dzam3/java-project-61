@@ -33,6 +33,10 @@ public class App {
                 Your choice:""");
         var answer = scanner.nextInt();
 
+        gameSelect(answer);
+    }
+
+    private static void gameSelect(int answer) {
         switch (answer) {
             case GREETING:
                 askName();

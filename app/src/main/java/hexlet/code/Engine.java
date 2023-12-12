@@ -23,13 +23,10 @@ public class Engine {
                 System.out.println("'" + response + "'" + " is wrong answer ;(. Correct answer was '"
                         + rightAnswer + "'"
                         + "\nLet's try again, " + name + "!");
-                break;
-            }
-
-            if (i == 2) {
-                System.out.println("Congratulations, " + name + "!");
+                return;
             }
         }
+        System.out.println("Congratulations, " + name + "!");
     }
 
     public static String askName() {
