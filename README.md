@@ -15,3 +15,5 @@ make run
 [GCD](https://asciinema.org/a/DbhXJTzEU87ZT6nGouZwdzEq5)
 
 [Progression](https://asciinema.org/a/uuuEed2UN5JcbHQSlyBFkKqTa)
+
+[Prime](https://asciinema.org/a/3QQMkp19eDSyvCgVwSHOMhqGJ)
