@@ -22,16 +22,18 @@ public class Prime {
         String[] round = new String[ROUNDS_SLOTS];
         round[0] = String.valueOf(number);
 
-        String rightAnswer = "yes";
-
-        for (int counter = 2; counter <= Math.sqrt(number); counter += 1) {
-            if (number % counter == 0) {
-                rightAnswer = "no";
-                break;
-            }
-        }
+        String rightAnswer = isPrime(number) ? "yes" : "no";
         round[1] = rightAnswer;
 
         return round;
+    }
+
+    private static boolean isPrime(int number) {
+        for (int counter = 2; counter <= Math.sqrt(number); counter += 1) {
+            if (number % counter == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
